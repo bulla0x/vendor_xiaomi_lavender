@@ -36,7 +36,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
     vendor/xiaomi/lavender/proprietary/vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_workspaceFile.qwsp \
     vendor/xiaomi/lavender/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
-    vendor/xiaomi/lavender/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/GpuKernelRepo.pb:$(TARGET_COPY_OUT_VENDOR)/etc/camera/GpuKernelRepo.pb \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/beauty_ui9_intelligent_params.config:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beauty_ui9_intelligent_params.config \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
@@ -135,7 +134,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/xiaomi/lavender/proprietary/vendor/etc/seccomp_policy/qti-systemd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qti-systemd.policy \
     vendor/xiaomi/lavender/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
-    vendor/xiaomi/lavender/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/a512_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b00 \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/a512_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b01 \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/a512_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b02 \
@@ -268,7 +266,6 @@ PRODUCT_PACKAGES += \
     libmdmdetect \
     libmdsprpc \
     libminkdescriptor \
-    libminksocket \
     libmm-hdcpmgr \
     libmmcamera_dbg \
     libmulawdec \
@@ -1229,7 +1226,7 @@ PRODUCT_PACKAGES += \
     consumerir.spi.sdm660 \
     fingerprint.fpc.default \
     fingerprint.goodix.default \
-    vendor.qti.gnss@4.0-impl \
+    vendor.qti.gnss@4.3-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.capabilityconfigstore@1.0-impl \
     vendor.qti.hardware.fm@1.0-impl \
@@ -1252,11 +1249,8 @@ PRODUCT_PACKAGES += \
     libGPreqcancel \
     libSecureUILib \
     libStDrvInt \
-    libasn1cper \
-    libasn1crt \
-    libasn1crtx \
+    libaoa \
     libbase64 \
-    libcacertclient \
     libcdfw \
     libcdfw_remote_api \
     libcne \
@@ -1280,17 +1274,19 @@ PRODUCT_PACKAGES += \
     libhdcpsrm \
     libizat_client_api \
     libizat_core \
-    libjnihelper \
     liblbs_core \
     libloadalgo_stub \
     libloc_api_v02 \
     libloc_api_wds \
+    libloc_qwes_iface \
+    libloc_ril_client \
     libloc_socket \
     liblocationservice \
     liblocationservice_glue \
     liblowi_client \
     liblowi_wifihal \
     liblqe \
+    libminksocket \
     libmlipay \
     libmlipay@1.1 \
     libnetmgr \
@@ -1309,7 +1305,6 @@ PRODUCT_PACKAGES += \
     libqcmaputils \
     libqcrilFramework \
     libqcrildatactl \
-    libqdma_file_agent \
     libqisl \
     libqsocket \
     librcc \
@@ -1338,8 +1333,6 @@ PRODUCT_PACKAGES += \
     libwvhidl \
     libxml \
     libxtadapter \
-    libxtwifi_server_protocol \
-    libxtwifi_server_protocol_uri_v3 \
     libwvdrmengine \
     qcrilHalMarshal \
     qcrild_librilutils \
@@ -1357,10 +1350,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss@2.0 \
     vendor.qti.gnss@2.1 \
     vendor.qti.gnss@3.0 \
-    vendor.qti.gnss@4.0-service \
     vendor.qti.gnss@4.0 \
+    vendor.qti.gnss@4.1 \
+    vendor.qti.gnss@4.2 \
+    vendor.qti.gnss@4.3-service \
+    vendor.qti.gnss@4.3 \
     vendor.qti.hardware.alarm@1.0_vendor \
-    vendor.qti.hardware.cacert@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0_vendor \
     vendor.qti.hardware.data.cne.internal.constants@1.0_vendor \
     vendor.qti.hardware.data.cne.internal.server@1.0_vendor \
@@ -1729,7 +1724,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency-V2.2-java \
     vendor.qti.latencyaidlservice-V1-java \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
-    vendor.qti.gnss@4.0-service.xml \
+    vendor.qti.gnss@4.3-service.xml \
     adpl \
     adsprpcd \
     audioflacapp \
@@ -1762,7 +1757,6 @@ PRODUCT_PACKAGES += \
     loadalgo \
     loc_launcher \
     lowi-server \
-    mlid \
     mlipayd@1.1 \
     mm-pp-dpps \
     msm_irqbalance \
@@ -1784,8 +1778,6 @@ PRODUCT_PACKAGES += \
     thermal-engine \
     time_daemon \
     xtra-daemon \
-    xtwifi-client \
-    xtwifi-inet-agent \
     dpmd \
     qxrsplitauxservice
 
