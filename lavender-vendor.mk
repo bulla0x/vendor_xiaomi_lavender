@@ -96,8 +96,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
-    vendor/xiaomi/lavender/proprietary/vendor/etc/diracmobile.config:$(TARGET_COPY_OUT_VENDOR)/etc/diracmobile.config \
-    vendor/xiaomi/lavender/proprietary/vendor/etc/diracvdd.bin:$(TARGET_COPY_OUT_VENDOR)/etc/diracvdd.bin \
     vendor/xiaomi/lavender/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/xiaomi/lavender/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
@@ -338,7 +336,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.tui_comm@1.0_vendor \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
-    libDiracAPI_SHARED \
     libSNPE \
     libSonyIMX376C3RmscLibrary \
     libSonyIMX376KRmscLibrary \
@@ -1219,8 +1216,6 @@ PRODUCT_PACKAGES += \
     libvideoutils \
     libvidhance \
     libvidhance_gyro \
-    libdirac \
-    libmisoundfx \
     com.qualcomm.qti.imscmservice@1.0 \
     com.qualcomm.qti.imscmservice@2.0_vendor \
     com.qualcomm.qti.imscmservice@2.1_vendor \
